@@ -14,9 +14,9 @@ namespace DevTalles.Controllers
         private readonly ApplicationDbContext db;
         private readonly IWebHostEnvironment hostEnvironment;
 
-        public CursosController(ApplicationDbContext db, IWebHostEnvironment hostEnvironment)
+        public CursosController(ApplicationDbContext context, IWebHostEnvironment hostEnvironment)
         {
-            this.db = db;
+            this.db = context;
             this.hostEnvironment = hostEnvironment;
         }
 
