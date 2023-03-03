@@ -16,10 +16,10 @@ namespace DevTalles.Controllers
             _db = db;
         }
 
-        //Get Mostramos la lista de Categorias en la vista index
+        //Get Mostramos la lista de Categoriass en la vista index
         public async Task<IActionResult> Index()
         {
-            var ListaCategoria =await _db.Categorias.ToListAsync();
+            var ListaCategoria =await _db.Categoriass.ToListAsync();
 
             return View(ListaCategoria);
         }
@@ -42,7 +42,7 @@ namespace DevTalles.Controllers
         {
             if (!ModelState.IsValid) { return NotFound(); }
 
-           await _db.Categorias.AddAsync(model);
+           await _db.Categoriass.AddAsync(model);
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
 
@@ -57,7 +57,7 @@ namespace DevTalles.Controllers
                 return NotFound();
             }
 
-            var categoriadb =_db.Categorias.Find(id);
+            var categoriadb =_db.Categoriass.Find(id);
             if (categoriadb is null)
             {
                 return NotFound();
@@ -76,7 +76,7 @@ namespace DevTalles.Controllers
             {
                 return NotFound();
             }
-            _db.Categorias.Update(categoria);
+            _db.Categoriass.Update(categoria);
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
@@ -91,7 +91,7 @@ namespace DevTalles.Controllers
                 return NotFound();
             }
 
-            var categoriadb = _db.Categorias.Find(id);
+            var categoriadb = _db.Categoriass.Find(id);
             if (categoriadb is null)
             {
                 return NotFound();
@@ -111,7 +111,7 @@ namespace DevTalles.Controllers
 
             
 
-             _db.Categorias.Remove(model);
+             _db.Categoriass.Remove(model);
             await _db.SaveChangesAsync();
             return RedirectToAction("Index");
 
@@ -125,7 +125,7 @@ namespace DevTalles.Controllers
         public async Task<IActionResult> ValidarNombre(string NombreCategoria)
         {
 
-            var existe = await _db.Categorias.AnyAsync(name => name.NombreCategoria == NombreCategoria);
+            var existe = await _db.Categoriass.AnyAsync(name => name.NombreCategoria == NombreCategoria);
 
             if (existe)
             {

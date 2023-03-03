@@ -167,7 +167,7 @@ namespace DevTalles.Controllers
 
         public IEnumerable<SelectListItem> DropdownCategoria()
         {
-            return _db.Categorias.Select(c => new SelectListItem(c.NombreCategoria, c.CategoriaId.ToString()));
+            return _db.Categoriass.Select(c => new SelectListItem(c.NombreCategoria, c.CategoriaId.ToString()));
         }
     }
 }

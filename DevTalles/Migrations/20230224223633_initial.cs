@@ -11,7 +11,7 @@ namespace DevTalles.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Categorias",
+                name: "Categoriass",
                 columns: table => new
                 {
                     CategoriaId = table.Column<int>(type: "int", nullable: false)
@@ -39,7 +39,7 @@ namespace DevTalles.Migrations
                     table.ForeignKey(
                         name: "FK_SubCategorias_Categorias_CategoriaId",
                         column: x => x.CategoriaId,
-                        principalTable: "Categorias",
+                        principalTable: "Categoriass",
                         principalColumn: "CategoriaId",
                         onDelete: ReferentialAction.NoAction);
                 });
@@ -64,7 +64,7 @@ namespace DevTalles.Migrations
                     table.ForeignKey(
                         name: "FK_Cursos_Categorias_CategoriaId",
                         column: x => x.CategoriaId,
-                        principalTable: "Categorias",
+                        principalTable: "Categoriass",
                         principalColumn: "CategoriaId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -101,7 +101,7 @@ namespace DevTalles.Migrations
                 name: "SubCategorias");
 
             migrationBuilder.DropTable(
-                name: "Categorias");
+                name: "Categoriass");
         }
     }
 }

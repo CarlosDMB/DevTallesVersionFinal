@@ -41,7 +41,7 @@ namespace DevTalles.Migrations
 
                     b.HasKey("CategoriaId");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("Categoriass");
                 });
 
             modelBuilder.Entity("DevTalles.Models.Curso", b =>
