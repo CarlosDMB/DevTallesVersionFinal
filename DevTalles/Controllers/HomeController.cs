@@ -29,7 +29,18 @@ namespace DevTalles.Controllers
             return View(model);
         }
 
-        public IActionResult Privacy()
+		public  IActionResult Detalle(int id)
+		{
+            DetalleProductoVM model = new()
+            {
+                curso =  db.Cursos.Include(c => c.Categoria).Include(sb => sb.SubCategoria).Where(c => c.Id == id).FirstOrDefault(),
+                ExisteEnCarro = false
+				
+			};
+			return View(model);
+		}
+
+		public IActionResult Privacy()
         {
             return View();
         }

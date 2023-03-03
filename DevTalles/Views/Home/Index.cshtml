@@ -1,4 +1,4 @@
-﻿@using DevTalles.Models.ViewModels;
+@using DevTalles.Models.ViewModels;
 @model HomeVM
 
 <div class="container">
@@ -26,7 +26,6 @@
 			<div class="col-12 text-center">
 				<p>No hay cursos disponibles.</p>
 			</div>
-		</div>
 	</div>
 
 </div>
@@ -49,7 +48,7 @@
 				if ($('.filter').filter('.' + value).length == 0) {
 					$('.validarCurso').append('<div class="col-12 text-center">No hay cursos disponibles</div>');
 				} else {
-					$('.row').find('.col-12.text-center').remove(); // Si hay elementos, quitar el mensaje de "No hay cursos disponibles" si se está mostrando
+					$('.validarCurso').find('.col-12.text-center').remove(); // Si hay elementos, quitar el mensaje de "No hay cursos disponibles" si se está mostrando
 				}
 			}
 		});
