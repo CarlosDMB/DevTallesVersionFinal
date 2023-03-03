@@ -23,7 +23,7 @@ namespace DevTalles.Controllers
             HomeVM model = new()
             {
                 Cursos = db.Cursos.Include(c => c.Categoria).Include(sb => sb.SubCategoria),
-                Categorias = db.Categorias.ToList(),
+                Categorias = db.Categoriass.ToList(),
                 CursosDisponibles = db.Cursos.Any()
             };
             return View(model);

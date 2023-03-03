@@ -9,7 +9,7 @@ namespace DevTalles.Data
         {
         }
 
-        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Categoria> Categoriass { get; set; }
         public DbSet<SubCategoria> SubCategorias { get; set; }
         public DbSet<Curso> Cursos { get; set; }
        
