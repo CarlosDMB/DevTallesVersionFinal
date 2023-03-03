@@ -10,9 +10,9 @@ namespace DevTalles.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ApplicationDbContext db;
+        private readonly AppDbContext db;
 
-        public HomeController(ILogger<HomeController> logger , ApplicationDbContext db)
+        public HomeController(ILogger<HomeController> logger , AppDbContext db)
         {
             _logger = logger;
             this.db = db;

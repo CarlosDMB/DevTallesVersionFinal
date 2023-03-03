@@ -7,11 +7,11 @@ namespace DevTalles.Controllers
 {
     public class CategoriaController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly AppDbContext _db;
 
 
         //por medio de inyeccion de dependencia accedemos al DbContext para manipular los datos
-        public CategoriaController(ApplicationDbContext db)
+        public CategoriaController(AppDbContext db)
         {
             _db = db;
         }
